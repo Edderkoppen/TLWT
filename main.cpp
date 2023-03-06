@@ -28,13 +28,12 @@ int main()
 
     // on laisse l'interface graphique ouverte
 
-    // pn va implementer egalement des evenement ; ie, clics de souris pour fermer l'interface
+    // on va implementer egalement des evenement ; ie, clics de souris pour fermer l'interface
 
     while(window.isOpen()) {
         sf::Event event; // on declare une instance d'evenement
         while (window.pollEvent(event)) {
-            if (event.type ==
-                sf::Event::Closed) // dans le cas ou l'evenement est une fenetre fermée ; on ferme la fentre par un clic de souris
+            if (event.type == sf::Event::Closed) // dans le cas ou l'evenement est une fenetre fermée ; on ferme la fentre par un clic de souris
             {
                 window.close();
             }
@@ -43,9 +42,12 @@ int main()
         /* on implemente les rectangles sur le terrain
          *
          */
-        window.draw(w);
-        window.draw(dirt);
-        window.draw(grass);
+        for(int i=0;i<800;i++) { // on parcourt le terrain
+            w.setPosition(i,0); //on place la couleur le long de la carte
+            window.draw(w); // puis on affiche
+            
+
+        }
         /* affichage du terrain */
        window.display();
     }
