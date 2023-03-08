@@ -12,10 +12,18 @@ int main()
 
     int map[20][20] = {{0,1,1},{1,1,1},{0,0,1},{1,1,1,1,0}}; // on cree un tableau de 20 cases
 
-    sf::RectangleShape rectangle(sf::Vector2f(120,120)); // on cree une figure rectangle de dimension 120, 120 en longeur et hauteur
+    sf::RectangleShape rectangle(sf::Vector2f(120,120));// on cree une figure rectangle de dimension 120, 120 en longeur et hauteur
+    sf::RectangleShape rectangle2(sf::Vector2f(120,120));
+    sf::RectangleShape rectangle3(sf::Vector2f(120,120));
     rectangle.setFillColor(sf::Color(102,51,51)); // puis on le remplit en couleur
+    rectangle2.setFillColor(sf::Color(30,40,1));
+    rectangle3.setFillColor(sf::Color(1,1,1));
     rectangle.setOutlineThickness(3); // on decide de mettre une epaisseur au ligne
+    rectangle2.setOutlineThickness(3);
+    rectangle3.setOutlineThickness(3);
     rectangle.setOutlineColor(sf::Color::White); // les lignes seront de couleur blanches
+    rectangle2.setOutlineColor(sf::Color::White);
+    rectangle3.setOutlineColor(sf::Color::White);
     while(window.isOpen())
     {
         sf::Event event; // on cree un evenement
@@ -41,13 +49,13 @@ int main()
                 }
                 if (val == 2)
                 {
-                    rectangle.setPosition(i*CASE,j*CASE);
-                    window.draw(rectangle);
+                    rectangle2.setPosition(i*CASE,j*CASE);
+                    window.draw(rectangle2);
                 }
                 if(val==3)
                 {
-                    rectangle.setPosition(i*CASE,j*CASE);
-                    window.draw(rectangle);
+                    rectangle3.setPosition(i*CASE,j*CASE);
+                    window.draw(rectangle3);
                 }
 
             }
@@ -55,10 +63,7 @@ int main()
 
         }
 
-
-
-
-
+        
 
         window.display(); // on affiche la fentre graphique
     }
