@@ -1,5 +1,5 @@
 #include <SFML/Graphics.hpp>
-#include "map.hpp"
+#include "mapAleatoire.hpp"
 #define TAILLE 40
 #define CASE 20
 
