@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "mapAleatoire.hpp"
+#include "Tower.hpp"
 #define TAILLE 40
 #define CASE 20
 
@@ -43,8 +44,8 @@ int main()
                 if (val==1)
                 {
 
-                        rectangle.setPosition(i*CASE,j*CASE);
-                        window.draw(rectangle);
+                    rectangle.setPosition(i*CASE,j*CASE);
+                    window.draw(rectangle);
 
                 }
                 if (val == 2)
@@ -63,10 +64,12 @@ int main()
 
         }
 
-        
+        // dessine la tour
+        Tower tower(500,500);
+        tower.draw(window);
 
         window.display(); // on affiche la fentre graphique
     }
-   return 0;
+    return 0;
 }
 
