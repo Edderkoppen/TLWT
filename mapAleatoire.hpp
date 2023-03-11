@@ -1,6 +1,7 @@
 
-#ifndef HELLOSFML_MAP_HPP
-#define HELLOSFML_MAP_HPP
+#ifndef HELLOSFML_MAPALEATOIRE_HPP
+#define HELLOSFML_MAPALEATOIRE_HPP
 #include <iostream>
+#include <SFML/Graphics.hpp>
 
-#endif //HELLOSFML_MAP_HPP
+#endif //HELLOSFML_MAPALEATOIRE_HPP
