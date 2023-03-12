@@ -1,5 +1,7 @@
 
 
+
+
 #ifndef HELLOSFML_TOWER_HPP
 #define HELLOSFML_TOWER_HPP
 #include <iostream>
@@ -10,18 +12,11 @@
 class Tower
 {
 private:
-    sf::Texture texture;
-    sf::Sprite sprite;
-    float posX;
-    float posY;
-    int level;
-    float range;
-    float fireRate;
-    float timer;
+    sf::RectangleShape rectangle; //creation de la tour
 public:
-    Tower(float x,float y);
-    void upgrade(); // fonction de mise a jour
+    // creation du constructeur
+    Tower(float x,float y,float width, float height, sf::Color& color);
+    //creation de la methode draw pour dessiner a l'ecran
     void draw(sf::RenderWindow& window);
-
 };
 #endif //HELLOSFML_TOWER_HPP
