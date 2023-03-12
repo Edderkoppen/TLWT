@@ -1,40 +1,15 @@
 #include "Tower.hpp"
 
-Tower::Tower(float x ,float y)
+Tower::Tower(float x, float y, float width, float height, const sf::Color &color)
 {
-    // constructeur
-    posX = x;
-    posY = y;
-    level = 0;
-    range = 100;
-    fireRate = 0.5;
-    timer = 0;
-
-    // gestion de l'image
-
-    if(!texture.loadFromFile("/Users/bilelmajdoub/Documents/ProjetFinalTowerDefense/tower.png"));
-    {
-        EXIT_FAILURE;
-    }
-    sprite.setTexture(texture);
-    sprite.setPosition(posX,posY);
-
+    /* creation du constructeur */
+    rectangle.setPosition(x,y);
+    rectangle.setSize(sf::Vector2f(width,height));
+    rectangle.setFillColor(color);
 }
-
-void Tower::upgrade()
-{
-    // augmente le niveau de la tour et met a jour ses proprietes
-
-    level+=1;
-    range+=100;
-    fireRate+=0.2;
-}
-
 void Tower::draw(sf::RenderWindow &window)
 {
-    // desine la tour sur la fentre du jeu
+    /* dessine une tour */
+    window.draw(rectangle);
 
-    sprite.setPosition(posX,posY);
-    window.draw(sprite);
 }
-
