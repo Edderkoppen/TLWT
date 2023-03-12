@@ -7,8 +7,9 @@
 
 int main()
 {
-
-
+    // creation d'une tour
+    Tower tower(400,300,50,100,sf::Color::Red);
+    std::cout<<"======================================"<<std::endl;
     sf::RenderWindow window(sf::VideoMode(800,600),"Tower Defense"); // on cree une interface graphique pour le dessin
 
     int map[20][20] = {{0,1,1},{1,1,1},{0,0,1},{1,1,1,1,0}}; // on cree un tableau de 20 cases
@@ -63,10 +64,8 @@ int main()
 
 
         }
+        tower.draw(window); // dessine une tour
 
-        // dessine la tour
-        Tower tower(500,500);
-        tower.draw(window);
 
         window.display(); // on affiche la fentre graphique
     }
