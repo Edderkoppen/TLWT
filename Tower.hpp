@@ -1,8 +1,6 @@
 
 
 
-
-#ifndef HELLOSFML_TOWER_HPP
 #define HELLOSFML_TOWER_HPP
 #include <iostream>
 #include <SFML/Graphics.hpp>
@@ -15,7 +13,7 @@ private:
     sf::RectangleShape rectangle; //creation de la tour
 public:
     // creation du constructeur
-    Tower(float x,float y,float width, float height, sf::Color& color);
+    Tower(float x,float y,float width, float height, const sf::Color& color);
     //creation de la methode draw pour dessiner a l'ecran
     void draw(sf::RenderWindow& window);
 };
